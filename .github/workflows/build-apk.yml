@@ -28,6 +28,9 @@ jobs:
       - name: Add Android platform
         run: npx cap add android || npx cap sync android
 
+      - name: Ensure assets folder exists
+        run: mkdir -p android/app/src/main/assets
+
       - name: Generate icons (se houver resources/icon.png)
         run: |
           if [ -f "resources/icon.png" ]; then
