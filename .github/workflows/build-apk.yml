@@ -25,7 +25,7 @@ jobs:
       - name: Install deps
         run: npm install
 
-      - name: Adicionar plataforma Android
+      - name: Add Android platform
         run: npx cap add android || npx cap sync android
 
       - name: Ensure assets folder exists
